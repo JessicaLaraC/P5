@@ -108,10 +108,11 @@ int read_button(int port, int pin)
 ![Untitled Sketch_bb](https://github.com/JessicaLaraC/P5/assets/110583656/4fd6af16-bb0f-42ea-bc66-820c92245f73)
 delay.s
 ![image](https://github.com/JessicaLaraC/P5/assets/110583656/4e442b93-202d-4563-8999-bf4745359a7b)
+
 Esta funcion retrasa la ejecución del progrma en milisegundos 
-# for (i = 0; i < ms; i++)
+	for (i = 0; i < ms; i++)
 	
-# for (j = 0; j < tick; j++)
+	for (j = 0; j < tick; j++)
 
 ## compilacion de sofware
    lectura de la tarjeta de desarrollo blue pill
