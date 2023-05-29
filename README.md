@@ -72,7 +72,48 @@ Se la lógica de los botones se codificó en alto nivel para pasar al ensamblado
             return 0;
         }
 
-## output.s
+
+# read_button.s
+![image](https://github.com/JessicaLaraC/P5/assets/110583656/f6d1c018-12f4-4e37-ac61-9d3abf623941)
+#define DELAY 50
+#define SAMPLES 10
+#define POSITIVE_READINGS 4
+
+
+int digital_read(int port, int pin);
+void delay(int ms);
+
+int read_button(int port, int pin)
+{
+    int bit = digital_read(port, pin);
+    if (!bit)
+        return 0;
+    int counter = 0;
+    for (int i = 0; i < SAMPLES; i++)
+    {
+        delay(5);
+        bit = digital_read(port, pin);
+        if (!bit)
+            counter = 0;
+        else{
+            counter++;
+            if (counter >= POSITIVE_READINGS)
+                return 1;
+        }
+    }
+    return 0;
+}
+## salida.s
     Para emitir el valor se modifico poniendo una mascara para nuestro puerto diginal de los 9 led, agregamos un registro con la mascara 0x3FF para poder prender los 9 leds.
 ![Untitled Sketch_bb](https://github.com/JessicaLaraC/P5/assets/110583656/4fd6af16-bb0f-42ea-bc66-820c92245f73)
+delay.s
+![image](https://github.com/JessicaLaraC/P5/assets/110583656/4e442b93-202d-4563-8999-bf4745359a7b)
+Esta funcion retrasa la ejecución del progrma en milisegundos 
+# for (i = 0; i < ms; i++)
+	
+# for (j = 0; j < tick; j++)
 
+## compilacion de sofware
+   lectura de la tarjeta de desarrollo blue pill
+   conectar al progrma STM32CubeProg
+   ejecutar los comando de make, make clean para quitar los archivos .o, despues make para crear los archivos. o, en progrma STM32CubeProg cargamos el archivo en binario.
