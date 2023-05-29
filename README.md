@@ -39,9 +39,9 @@ Se la lógica de los botones se codificó en alto nivel para pasar al ensamblado
     # else if (!buttonA && buttonB)
         #     counter--;
     ## MARCO 
-    ![image](https://github.com/JessicaLaraC/P5/assets/110583656/0f341690-fcba-444d-bc3b-0d555789d7b3)
+![image](https://github.com/JessicaLaraC/P5/assets/110583656/c6e6e1b5-839d-4032-924b-d81cf22f360d)
 
-## botón_leer.s
+## boton_leer.s
     Logica del codigo en alto nivel 
     
     #define DELAY 50
