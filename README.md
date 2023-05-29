@@ -74,4 +74,5 @@ Se la lógica de los botones se codificó en alto nivel para pasar al ensamblado
 
 ## output.s
     Para emitir el valor se modifico poniendo una mascara para nuestro puerto diginal de los 9 led, agregamos un registro con la mascara 0x3FF para poder prender los 9 leds.
+![Untitled Sketch_bb](https://github.com/JessicaLaraC/P5/assets/110583656/4fd6af16-bb0f-42ea-bc66-820c92245f73)
 
